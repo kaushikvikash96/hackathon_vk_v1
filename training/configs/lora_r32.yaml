@@ -1,0 +1,48 @@
+# LoRA configuration for Llama-3.1-Nemotron-Nano-8B-v1 synthesis fine-tuning.
+#
+# Starts from the organizer reference baseline (Setup_Instructions.md), with the
+# deviations recorded below. Consumed by run_train.sh; adjust there if the
+# supplied NeMo recipe expects different key names.
+
+model:
+  base: Llama-3.1-Nemotron-Nano-8B-v1
+  # Host path from the USB bootstrap; override with $MODELS_DIR on the cluster.
+  path: ${MODELS_DIR}/Llama-3.1-Nemotron-Nano-8B-v1
+
+peft:
+  scheme: lora
+  lora_rank: 32          # reference baseline
+  lora_alpha: 64
+  lora_dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj]
+
+training:
+  max_steps: 100         # step-20 checkpoint is already worth evaluating
+  checkpoint_every: 20
+  micro_batch_size: 2
+  global_batch_size: 8   # micro 2 x grad accum 4
+  grad_accum: 4
+  learning_rate: 5.0e-5  # 1e-4 spikes the loss after warmup on this setup
+  warmup_steps: 50
+  weight_decay: 0.01
+  max_seq_length: 512    # longer sequences OOM on a single GB10 node
+  precision: bf16
+  seed: 20260731
+
+data:
+  train: training/data/train_nemo.jsonl
+  validation: training/data/val_nemo.jsonl
+  test: training/data/test_nemo.jsonl
+  prompt_template: "{system}\n\n{input}"
+  answer_key: output
+
+runtime:
+  container: nvcr.io/nvidia/nemo:25.09   # 25.04 crashes on GB10
+  nodes: 1                               # keep the brain node free for serving
+  devices: 1
+
+# Deviations from the reference baseline, and why:
+#   - lora_alpha 64 (2x rank) is the conventional pairing and was not specified.
+#   - target_modules limited to attention projections to keep the adapter small
+#     and the step time low; revisit if validation loss plateaus early.
+#   - seed pinned so a rerun reproduces the reported base-versus-fine-tuned gap.

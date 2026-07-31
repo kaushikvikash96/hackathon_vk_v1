@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "team_id": "TODO-team-id",
+  "team_name": "TODO Team Name",
+  "github_url": "https://github.com/TODO/TODO",
+  "commit_sha": "TODO-40-character-commit-sha-to-be-judged",
+  "agent": {
+    "endpoint": "http://TODO-NODE0-LAN-IP:5000",
+    "health_path": "/health",
+    "query_path": "/query",
+    "timeout_seconds": 300
+  },
+  "model": {
+    "endpoint": "http://TODO-NODE1-LAN-IP:8001/v1",
+    "model_name": "nemotron-8b-finance"
+  }
+}

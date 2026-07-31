@@ -1,0 +1,10 @@
+# The Atom event environment supplies these already; pinned here for reproducibility.
+fastapi>=0.110
+uvicorn>=0.27
+pydantic>=2.5
+numpy>=1.26
+openai>=1.30
+httpx>=0.26
+
+# Development / verification only (not needed to serve the agent).
+pytest>=8.0

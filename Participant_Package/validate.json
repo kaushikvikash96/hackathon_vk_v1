@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cognitivo.local/hackathon/submission-validation.json",
+  "title": "Cognitivo Hackathon Agent Response",
+  "description": "Validation rules for each agent response. The hidden-question harness reads 'answer', 'steps', and 'tool_trace'. Only 'answer' is required for automated hidden-question scoring.",
+  "type": "object",
+  "required": ["answer"],
+  "properties": {
+    "answer": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The agent's direct response. This is the only response field graded by the automated hidden-question harness."
+    },
+    "steps": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of reasoning steps the agent took. Retained for private organizer diagnostics and the submitting team's sanitized report."
+    },
+    "tool_trace": {
+      "type": "array",
+      "description": "Ordered list of tool calls made during the agent's reasoning. Retained for private organizer diagnostics and the submitting team's sanitized report.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "tool": {"type": "string"},
+          "args": {"type": "object"},
+          "result": {"type": "string"}
+        }
+      }
+    }
+  }
+}

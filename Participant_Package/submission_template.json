@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "team_id": "mock-team",
+  "team_name": "Mock Team",
+  "github_url": "https://github.com/example/mock-team-agent",
+  "commit_sha": "0123456789abcdef0123456789abcdef01234567",
+  "agent": {
+    "endpoint": "http://172.20.x.x:5000",
+    "health_path": "/health",
+    "query_path": "/query",
+    "timeout_seconds": 300
+  },
+  "model": {
+    "endpoint": "http://172.20.x.x:8001/v1",
+    "model_name": "nemotron-8b-finance-lora"
+  }
+}

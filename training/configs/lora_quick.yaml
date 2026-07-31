@@ -1,0 +1,54 @@
+# Quick fine-tuning profile - roughly 30-45 minutes instead of 2-3 hours.
+#
+# Purpose: get a genuinely fine-tuned adapter serving early, so the agent can be
+# integrated and measured end to end while a full run is still an option. The
+# organizer guide notes the step-20 checkpoint already shows meaningful
+# improvement over the base model.
+#
+# Differences from lora_r32.yaml, and why each one matters:
+#
+#   max_steps 25 (was 100)
+#       Shorter run. Everything below follows from this.
+#
+#   warmup_steps 10 (was 50)
+#       THE important one. The reference baseline warms up over 50 steps, so a
+#       25-step run with the original setting would finish before the learning
+#       rate ever reached its peak and would barely train at all. Warmup is
+#       scaled with the run, not carried over.
+#
+#   checkpoint_every 5 (was 20)
+#       The guide warns that nothing is saved before the first checkpoint. At
+#       25 total steps a 20-step interval leaves one usable checkpoint and no
+#       recovery point; every 5 steps gives five to choose between.
+#
+#   train file train_quick_nemo.jsonl (was train_nemo.jsonl)
+#       A stratified 600-example subset. Fewer examples, but still one of every
+#       question shape - including the limitation cases, which teach the model
+#       to say the data cannot support a question rather than invent a figure.
+#
+# Everything else - rank, alpha, learning rate, sequence length, precision,
+# seed - is identical to the full profile, so the two runs stay comparable.
+
+extends: lora_r32.yaml
+
+training:
+  max_steps: 25
+  warmup_steps: 10
+  checkpoint_every: 5
+  learning_rate: 5.0e-5
+  max_seq_length: 512
+  micro_batch_size: 2
+  grad_accum: 4
+
+data:
+  train: training/data/train_quick_nemo.jsonl
+  validation: training/data/val_nemo.jsonl
+  test: training/data/test_nemo.jsonl
+
+expectations:
+  wall_time: 30-45 minutes on one GB10 node
+  select_on: validation loss and component recall, not step count
+  caveat: >
+    A quick adapter is for unblocking integration and producing an early
+    base-versus-fine-tuned comparison. Run the full profile as well if time
+    allows, and report whichever checkpoint actually measures better.

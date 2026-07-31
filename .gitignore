@@ -1,0 +1,17 @@
+# Derived AFR search index. Rebuild with: python scripts/build_afr_index.py
+artifacts/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Local environment overrides (never commit credentials)
+.env
+team.env
+
+# Run logs are written here; keep the folder, drop the noise.
+logs/*.jsonl
+!logs/.gitkeep

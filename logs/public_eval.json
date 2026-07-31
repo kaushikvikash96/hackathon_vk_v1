@@ -1,0 +1,519 @@
+{
+  "score_pct": 71.55,
+  "earned": 107.33,
+  "max": 150.0,
+  "judge": "literal",
+  "cases": [
+    {
+      "id": "MHQ001",
+      "difficulty": "easy",
+      "datasets": [
+        "RBA"
+      ],
+      "earned": 10.0,
+      "max": 10.0,
+      "latency_s": 5.24,
+      "slow_penalty": 0.0,
+      "answer": "41 of the 175 decision records changed the rate; 20 increases; 21 decreases.",
+      "components": [
+        {
+          "component_id": "C01",
+          "passed": true,
+          "points": 10.0
+        }
+      ],
+      "path": [
+        "plan",
+        "fallback_planner",
+        "act",
+        "synthesize"
+      ],
+      "synth": "mock"
+    },
+    {
+      "id": "MHQ035",
+      "difficulty": "medium",
+      "datasets": [
+        "RBA"
+      ],
+      "earned": 10.0,
+      "max": 10.0,
+      "latency_s": 4.03,
+      "slow_penalty": 0.0,
+      "answer": "There were 8 cuts (2 in 2011, 4 in 2012, 2 in 2013); totalling -2.25 percentage points; running from 2011-11-02; to 2013-08-07; the target immediately before the first cut was 4.75%; the target at the end of the period was 2.50%.",
+      "components": [
+        {
+          "component_id": "C01",
+          "passed": true,
+          "points": 5.0
+        },
+        {
+          "component_id": "C02",
+          "passed": true,
+          "points": 5.0
+        }
+      ],
+      "path": [
+        "plan",
+        "fallback_planner",
+        "act",
+        "synthesize"
+      ],
+      "synth": "mock"
+    },
+    {
+      "id": "MHQ040",
+      "difficulty": "easy",
+      "datasets": [
+        "ASX"
+      ],
+      "earned": 10.0,
+      "max": 10.0,
+      "latency_s": 4.21,
+      "slow_penalty": 0.0,
+      "answer": "There are 18 ticker files; each containing 1,774 rows; covering 2015-01-02; through 2021-12-30.",
+      "components": [
+        {
+          "component_id": "C01",
+          "passed": true,
+          "points": 10.0
+        }
+      ],
+      "path": [
+        "plan",
+        "fallback_planner",
+        "act",
+        "synthesize"
+      ],
+      "synth": "mock"
+    },
+    {
+      "id": "MHQ045",
+      "difficulty": "medium",
+      "datasets": [
+        "ASX"
+      ],
+      "earned": 10.0,
+      "max": 10.0,
+      "latency_s": 4.03,
+      "slow_penalty": 0.0,
+      "answer": "BHP.AX was best at +22.17% in 2018; AMP.AX was worst at -50.04% in 2018.",
+      "components": [
+        {
+          "component_id": "C01",
+          "passed": true,
+          "points": 5.0
+        },
+        {
+          "component_id": "C02",
+          "passed": true,
+          "points": 5.0
+        }
+      ],
+      "path": [
+        "plan",
+        "fallback_planner",
+        "act",
+        "synthesize"
+      ],
+      "synth": "mock"
+    },
+    {
+      "id": "MHQ049",
+      "difficulty": "medium",
+      "datasets": [
+        "ASX"
+      ],
+      "earned": 10.0,
+      "max": 10.0,
+      "latency_s": 4.07,
+      "slow_penalty": 0.0,
+      "answer": "AMP.AX has the highest average daily volume at 11,635,671.71 shares per trading day over the full sample; TPG.AX has the lowest average daily volume at 1,762,158.26 shares per trading day.",
+      "components": [
+        {
+          "component_id": "C01",
+          "passed": true,
+          "points": 10.0
+        }
+      ],
+      "path": [
+        "plan",
+        "fallback_planner",
+        "act",
+        "synthesize"
+      ],
+      "synth": "mock"
+    },
+    {
+      "id": "MHQ055",
+      "difficulty": "hard",
+      "datasets": [
+        "ASX"
+      ],
+      "earned": 10.0,
+      "max": 10.0,
+      "latency_s": 4.04,
+      "slow_penalty": 0.0,
+      "answer": "1) AMP.AX -82.45%, 2015-03-20 to 2021-12-17; 2) AGL.AX -76.24%, 2017-04-10 to 2021-11-16; 3) QAN.AX -71.08%, 2019-12-19 to 2020-03-19.",
+      "components": [
+        {
+          "component_id": "C01",
+          "passed": true,
+          "points": 3.33
+        },
+        {
+          "component_id": "C02",
+          "passed": true,
+          "points": 3.33
+        },
+        {
+          "component_id": "C03",
+          "passed": true,
+          "points": 3.34
+        }
+      ],
+      "path": [
+        "plan",
+        "fallback_planner",
+        "act",
+        "synthesize"
+      ],
+      "synth": "mock"
+    },
+    {
+      "id": "MHQ058",
+      "difficulty": "easy",
+      "datasets": [
+        "RBA",
+        "AFR"
+      ],
+      "earned": 6.0,
+      "max": 10.0,
+      "latency_s": 4.98,
+      "slow_penalty": 0.0,
+      "answer": "The article is \"Travel stocks take off on vaccine rollout\"; published 2021-02-23; the RBA cash-rate target in force was 0.10%; set by the decision effective 2021-02-03.",
+      "components": [
+        {
+          "component_id": "C01",
+          "passed": true,
+          "points": 2
+        },
+        {
+          "component_id": "C02",
+          "passed": true,
+          "points": 4
+        },
+        {
+          "component_id": "C03",
+          "passed": false,
+          "points": 4
+        }
+      ],
+      "path": [
+        "plan",
+        "fallback_planner",
+        "act",
+        "synthesize"
+      ],
+      "synth": "mock"
+    },
+    {
+      "id": "MHQ061",
+      "difficulty": "medium",
+      "datasets": [
+        "AFR"
+      ],
+      "earned": 10.0,
+      "max": 10.0,
+      "latency_s": 4.06,
+      "slow_penalty": 0.0,
+      "answer": "There are 5,997 AFR records matching \\bunemployment\\b; it peaked in 2020 with 1,452 matching records; May 2020 is the peak month with 218.",
+      "components": [
+        {
+          "component_id": "C01",
+          "passed": true,
+          "points": 5.0
+        },
+        {
+          "component_id": "C02",
+          "passed": true,
+          "points": 5.0
+        }
+      ],
+      "path": [
+        "plan",
+        "fallback_planner",
+        "act",
+        "synthesize"
+      ],
+      "synth": "mock"
+    },
+    {
+      "id": "MHQ067",
+      "difficulty": "hard",
+      "datasets": [
+        "RBA",
+        "AFR"
+      ],
+      "earned": 2.0,
+      "max": 10.0,
+      "latency_s": 4.08,
+      "slow_penalty": 0.0,
+      "answer": "The article is \"Why investors don't believe the RBA on interest rates\"; published 2021-11-25; the RBA cash-rate target in force was 0.10%; set by the decision effective 2021-11-03.",
+      "components": [
+        {
+          "component_id": "C01",
+          "passed": true,
+          "points": 2
+        },
+        {
+          "component_id": "C02",
+          "passed": false,
+          "points": 4
+        },
+        {
+          "component_id": "C03",
+          "passed": false,
+          "points": 4
+        }
+      ],
+      "path": [
+        "plan",
+        "fallback_planner",
+        "act",
+        "synthesize"
+      ],
+      "synth": "mock"
+    },
+    {
+      "id": "MHQ072",
+      "difficulty": "medium",
+      "datasets": [
+        "RBA",
+        "ASX"
+      ],
+      "earned": 0.0,
+      "max": 10.0,
+      "latency_s": 4.05,
+      "slow_penalty": 0.0,
+      "answer": "RIO.AX returned +44.46% in 2019; BHP.AX returned +28.58% in 2019; CBA.AX returned +19.20% in 2019; NAB.AX returned +10.95% in 2019; ANZ.AX returned +9.66% in 2019; there were 3 rate changes between 2019-01-01 and 2019-12-31.",
+      "components": [
+        {
+          "component_id": "C01",
+          "passed": false,
+          "points": 3.33
+        },
+        {
+          "component_id": "C02",
+          "passed": false,
+          "points": 3.33
+        },
+        {
+          "component_id": "C03",
+          "passed": false,
+          "points": 3.34
+        }
+      ],
+      "path": [
+        "plan",
+        "fallback_planner",
+        "act",
+        "synthesize"
+      ],
+      "synth": "mock"
+    },
+    {
+      "id": "MHQ074",
+      "difficulty": "hard",
+      "datasets": [
+        "RBA",
+        "ASX"
+      ],
+      "earned": 0.0,
+      "max": 10.0,
+      "latency_s": 4.04,
+      "slow_penalty": 0.0,
+      "answer": "The 17-stock basket rose +20.11% in 2019.",
+      "components": [
+        {
+          "component_id": "C01",
+          "passed": false,
+          "points": 2.5
+        },
+        {
+          "component_id": "C02",
+          "passed": false,
+          "points": 2.5
+        },
+        {
+          "component_id": "C03",
+          "passed": false,
+          "points": 2.5
+        },
+        {
+          "component_id": "C04",
+          "passed": false,
+          "points": 2.5
+        }
+      ],
+      "path": [
+        "plan",
+        "fallback_planner",
+        "act",
+        "synthesize"
+      ],
+      "synth": "mock"
+    },
+    {
+      "id": "MHQ076",
+      "difficulty": "easy",
+      "datasets": [
+        "ASX",
+        "AFR"
+      ],
+      "earned": 10.0,
+      "max": 10.0,
+      "latency_s": 4.07,
+      "slow_penalty": 0.0,
+      "answer": "QBE.AX was best at +35.57% in 2021; AGL.AX was worst at -44.38% in 2021; 1) QBE.AX +35.57%; 2) NAB.AX +33.83%; 3) GPT.AX +27.95%; there are 369 AFR records matching \\bQBE\\b in 2021; it peaked in 2021 with 369 matching records; January 2021 is the peak month with 44.",
+      "components": [
+        {
+          "component_id": "C01",
+          "passed": true,
+          "points": 10.0
+        }
+      ],
+      "path": [
+        "plan",
+        "fallback_planner",
+        "act",
+        "synthesize"
+      ],
+      "synth": "mock"
+    },
+    {
+      "id": "MHQ080",
+      "difficulty": "medium",
+      "datasets": [
+        "RBA",
+        "ASX",
+        "AFR"
+      ],
+      "earned": 6.0,
+      "max": 10.0,
+      "latency_s": 4.17,
+      "slow_penalty": 0.0,
+      "answer": "The article is \"Energy stocks shine as vaccines fuel oil rally\"; published 2020-11-28; the RBA cash-rate target in force was 0.10%; set by the decision effective 2020-11-04; the 17-stock basket rose +2.37% from 2020-11-30 to 2020-12-07.",
+      "components": [
+        {
+          "component_id": "C01",
+          "passed": true,
+          "points": 1
+        },
+        {
+          "component_id": "C02",
+          "passed": true,
+          "points": 2
+        },
+        {
+          "component_id": "C03",
+          "passed": false,
+          "points": 2
+        },
+        {
+          "component_id": "C06",
+          "passed": true,
+          "points": 3
+        },
+        {
+          "component_id": "C07",
+          "passed": false,
+          "points": 2
+        }
+      ],
+      "path": [
+        "plan",
+        "fallback_planner",
+        "act",
+        "synthesize"
+      ],
+      "synth": "mock"
+    },
+    {
+      "id": "MHQ084",
+      "difficulty": "medium",
+      "datasets": [
+        "RBA",
+        "ASX",
+        "AFR"
+      ],
+      "earned": 6.67,
+      "max": 10.0,
+      "latency_s": 4.05,
+      "slow_penalty": 0.0,
+      "answer": "There were 3 cuts (3 in 2019); totalling -0.75 percentage points; running from 2019-06-05; to 2019-10-02; the target immediately before the first cut was 1.50%; the target at the end of the period was 0.75%; the 17-stock basket rose +20.11% in 2019; the AFR corpus holds 219,538 articles; the earliest publication date is 20150102; the latest publication date is 20211229.",
+      "components": [
+        {
+          "component_id": "C01",
+          "passed": true,
+          "points": 3.33
+        },
+        {
+          "component_id": "C02",
+          "passed": false,
+          "points": 3.33
+        },
+        {
+          "component_id": "C03",
+          "passed": true,
+          "points": 3.34
+        }
+      ],
+      "path": [
+        "plan",
+        "fallback_planner",
+        "act",
+        "synthesize"
+      ],
+      "synth": "mock"
+    },
+    {
+      "id": "MHQ090",
+      "difficulty": "hard",
+      "datasets": [
+        "RBA",
+        "ASX",
+        "AFR"
+      ],
+      "earned": 6.66,
+      "max": 10.0,
+      "latency_s": 4.08,
+      "slow_penalty": 0.0,
+      "answer": "The RBA data covers 2010-02-03 to 2026-06-17; the ASX data covers 2015-01-02 to 2021-12-30; the AFR data covers 2015-01-02 to 2021-12-29; AFR and ASX both end in 2021, so any analysis after that year is unsupported; there were 13 hikes (8 in 2022, 5 in 2023); totalling +4.25 percentage points; running from 2022-05-04; to 2023-11-08; the target immediately before the first hike was 0.10%; the target at the end of the period was 4.35%.",
+      "components": [
+        {
+          "component_id": "C01",
+          "passed": true,
+          "points": 3.33
+        },
+        {
+          "component_id": "C02",
+          "passed": true,
+          "points": 3.33
+        },
+        {
+          "component_id": "C03",
+          "passed": false,
+          "points": 3.34
+        }
+      ],
+      "path": [
+        "plan",
+        "fallback_planner",
+        "act",
+        "synthesize"
+      ],
+      "synth": "mock"
+    }
+  ]
+}

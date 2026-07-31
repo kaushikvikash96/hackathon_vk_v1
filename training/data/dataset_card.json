@@ -1,0 +1,36 @@
+{
+  "total": 1986,
+  "by_source": {
+    "rba": 459,
+    "rba_windows": 121,
+    "asx": 456,
+    "asx_windows": 256,
+    "afr": 536,
+    "limitation": 140,
+    "robustness": 18,
+    "sentiment": 0
+  },
+  "splits": {
+    "train": 1688,
+    "val": 198,
+    "test": 100,
+    "train_quick": 600
+  },
+  "quick_subset": {
+    "size": 600,
+    "by_source": {
+      "afr": 159,
+      "asx": 110,
+      "asx_windows": 90,
+      "limitation": 47,
+      "rba_windows": 50,
+      "rba": 129,
+      "robustness": 15
+    },
+    "note": "stratified so every question shape survives a short run"
+  },
+  "seed": 20260731,
+  "format": "system/user/assistant chat plus a NeMo input/output mirror",
+  "label_provenance": "computed by the agent's own deterministic tool layer",
+  "excludes": "the 15 public calibration questions are held out entirely"
+}
